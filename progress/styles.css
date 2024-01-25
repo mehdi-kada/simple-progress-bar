@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Libre+Franklin:wght@300&family=Oswald&family=Raleway:wght@200&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rbotto', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-around; 
+    gap: 20px;
+}
+.prog-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    position: relative;
+    width: 100%;
+    
+}
+.prog-bar::before{
+    content: '';
+    width: 100%;
+    height: 10px;
+    background-color: #ece8e8;
+    position: absolute;
+    
+    z-index: -1;
+}
+.progress{
+    width: 0%;
+    height: 10px;
+    background-color: #3550c9;
+    position: absolute;
+    transition: 0.3s ease-in;
+    z-index: -1;
+}
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 2px solid #ece8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.7s ease;
+}
+.circle.active{
+    border: 2px solid #3550c9;
+    border-radius: 25%;
+}
+.btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #3550c9;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+.previous:disabled{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #7087d4;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    cursor: not-allowed;
+}
+.next:disabled{
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #7087d4;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    cursor: not-allowed;
+}
+.btn:active{
+    transform: scale(0.9);
+}
+.btn:focus{
+    outline: none;
+}
